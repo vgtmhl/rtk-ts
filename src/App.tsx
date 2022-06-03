@@ -1,10 +1,10 @@
-import React from 'react';
 import './App.css';
+import Counter from "./features/counter/Counter"
 
 function App() {
   return (
     <div className="App">
-      <p>Helo</p>
+      <Counter />
     </div>
   );
 }
