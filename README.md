@@ -37,9 +37,11 @@ Inside my component, I can import {useSelector} and {useDispatch} from "react-re
 I can now access my state via `useSelector(state => state.count.count)`, and interact with it via 
 `useDispatch(increment())` and `useDispatch(decrement())`  
 
+### Typescript
+
 Now, all of the above is redux-toolkit specific and works with JS, but we still need to add a couple things to make this
 work with TS.
 
 1. Install `@types/react-redux` if needed! As of `React Redux v7.2.3`, types are a dependency so that won't be needed.
 2. We will need types for `state` and `dispatch`. These can be inferred (see store.ts)
-3. We should also create typed hooks in `hooks.ts`
+3. We should also create typed hooks in `hooks.ts` for useDispatch and useSelector. These custom hooks will serve the same purpose as their "generalized" siblings, but they are injected with our application types.
